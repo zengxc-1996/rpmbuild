@@ -1,1 +1,1 @@
-# rpmbuild-sqlite3-
+# rpmbuild-sqlite3
