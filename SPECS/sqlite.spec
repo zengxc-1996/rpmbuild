@@ -1,24 +1,24 @@
-Name:sqlite-autoconf		
-Version: 3340000	
+Name: sqlite3		
+Version: 3.34
 Release: 1%{?dist}
-Summary:slqite3 is a db	
+Summary: sqlite3 database
 
 #Group:		
 License:GPL	
-URL:www.test.com		
-Source0:sqlite-autoconf-3340000.tar.gz	
+#URL:www.test.com		
+Source0: %{name}-%{version}.tar.gz	
 
 BuildRequires: make gcc	
 #Requires:	
 
 %description
-A simple RPM package to print Hello World
+sqlite3.34
 
 %prep
 %setup -q
 
 %build
-./configure
+./configure --prefix=%{_usr}
 make
 
 %install
@@ -27,4 +27,8 @@ make install DESTDIR=%{?buildroot}
 
 %files
 %defattr(-,root,root)
-/usr/local
+/usr
+
+%doc README.txt
+
+%changelog
